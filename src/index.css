@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #121212;
+  --color-charcoal-light: #1A1D1F;
+  --color-charcoal-card: #161819;
+  --color-charcoal-border: #2A2D30;
+  
+  --color-moss: #263B32;
+  --color-moss-light: #354F44;
+  --color-moss-dark: #192721;
+  
+  --color-cream: #F5F1E8;
+  --color-cream-muted: #D5CFC3;
+  
+  --color-gold: #C9A45C;
+  --color-gold-hover: #DFBA74;
+  --color-gold-dark: #A6833D;
+
+  --font-display: "Cinzel", Georgia, serif;
+  --font-body: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: #121212;
+  color: #F5F1E8;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Gold Gradient & Glow utilities */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #DFBA74 0%, #C9A45C 50%, #9D7A38 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 20px -3px rgba(201, 164, 92, 0.25);
+}
+
+.moss-gradient {
+  background: linear-gradient(135deg, rgba(38, 59, 50, 0.85) 0%, rgba(18, 18, 18, 0.95) 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  background: #263B32;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A45C;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+}
